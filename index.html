@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Intermediate Value Theorem</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/plot.css">
+    <script type="text/javascript" src="js/dark-theme.js"></script>
+    <script type="text/javascript" src="js/draw.js"></script>
+    <script src="https://unpkg.com/mathjs@6.2.5/dist/math.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>  </head>
+  <div class="header">
+    <a href="" class="logo">The Intermediate Value Theorem</a>
+    <div class="header-right">
+      <button class="button" onclick="enableDarkTheme()">Dark mode</button>
+    </div>
+  </div>
+  <body>
+	<form id="form">
+	  <label for="eq">Enter an equation:</label>
+	  <input type="text" id="eq" value="4 * sin(x) + 5 * cos(x/2)" />
+      <button class="button" onclick="draw()">Draw</button>
+	</form>
+	<div id="plot"></div>
+    <p>aaaaaaaaaaaa</p>
+  </body>
+</html>
