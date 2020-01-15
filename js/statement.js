@@ -13,8 +13,8 @@ function getStatement(){
 
 function getOppositeStatement(){
   var value = getStatement();
-  if (value != "A zero cannot be vertified on the interval."){
-    return "A zero cannot be vertified on the interval.";
+  if (value == "A zero cannot be vertified on the interval."){
+    return "Since f(x) is continuous over (" + getCookieValue("iA") + "," + getCookieValue("iB") + ") and f(" + getCookieValue("iA") + ") < f(c) < f(" + getCookieValue("iB") + "), there exists AT LEAST one value 'c' such that f(c) = the output you are trying to prove exists on the interval by the Intermediate Value Theorem.";
   }
-  return value;
+  return "A zero cannot be vertified on the interval.";
 }
