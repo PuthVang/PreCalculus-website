@@ -6,6 +6,8 @@ function setDefaultCookies(){
 	setCookieValue("correctValuaaaaaes", "10")
 	setCookieValue("correctValuaaaaaaes", "10")
 	setCookieValue("correctValuaaaaaaes", "25")
+	console.log(getCookieValue("correctValuas"))
+	console.log(getCookieValue("aaaaa"))
 }
 
 function setCookieValue(cookieID, cookieValue){
@@ -45,15 +47,20 @@ function getCookieValue(cookieID){
 		for (s of cookieSplit){
 			var sSplit = s.split("=");
 			if (sSplit[0] == cookieID){
-				return sSplit[1].substring(0, sSplit[1].length - 1)
-			}
+                if (sSplit[1].charAt(sSplit[1].length-1) == ";"){
+                    return sSplit[1].substring(0, sSplit[1].length - 1)
+                }
+                return sSplit[1]
+            }
 		}
-	}
+    }
+    return null;
 
 }
 
 function deleteAllCookies() {
     var cookies = document.cookie.split(";");
+
     for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i];
         var eqPos = cookie.indexOf("=");

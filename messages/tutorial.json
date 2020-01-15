@@ -1,0 +1,50 @@
+var jsonMessages = [
+    {
+      "messages":{
+        "tutorial":{
+            "1": "Welcome to the tutorial of the Intermediate Value Theorem\n",
+            "2": "An example is f(x)={TUTORIAL-EXAMPLE}\n",
+            "3": "The objective is to use the Intermediate Value Theorem\n",
+            "4": "to figure out whether there is a root in the interval ({VALUE-1}, {VALUE-2})\n",
+            "5": "And it is incredibly simple to figure out.\n",
+            "6": "\n",
+            "7": "First, you plug in the intervals into the equation!\n",
+            "8": "{SOLVED-EQUATION-VALUE-1}\n",
+            "9": "{SOLVED-EQUATION-VALUE-2}\n",
+            "10": "\n",
+            "11": "Second, check if the values go through 0\n",
+            "12": "If yes, then the Intermediate Value Theorem is correct.\n",
+            "13": "If not, then it's wrong.\n",
+            "14": "\n",
+            "15": "Finally, make a statement.\n\n",
+            "16": "In this case, the statement would be...\n",
+            "17": "\"{EQUATION-STATEMENT}\"\n\n",
+            "18": "The other statement is\n",
+            "19": "\"{OPPOSITE-EQUATION-STATEMENT}\"\n\n",
+            "20": "And that's all!"
+        }
+      }
+    }
+]
+
+{
+    "examples":{
+        "tutorial":{
+            "1": "12*(x^3) - 32*(x^2) + 3*(x) + 5",
+            "2": "(x^3) - 5*(x^2) + 3*(x) + 6",
+            "3": "(x^3) - 4*(x^2) + 2*(x) + 1",
+            "4": "(x^5) - 7*(x^3) + 5(x) - 1"
+        }
+    }
+}
+
+var jsonExamples = [
+    {
+        "examples":{
+            "tutorial":{
+                "1": "12*(x^3) - 32*(x^2) + 3*(x) + 5",
+                "2": "(x^3) - 5*(x^2) + 3*(x) + 6"
+            }
+        }
+    }
+]
