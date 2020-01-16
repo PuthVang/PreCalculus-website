@@ -38,13 +38,11 @@
     
     <!-- Custom json files -->
     <script type="text/javascript" src="messages/tutorial.json"></script>
-    
+
 </head>
 
 <body>
-
     <div id="wrapper">
-
       <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
           <h2>TIVT</h2>
@@ -72,9 +70,7 @@
             <a href="#"><i class="fa fa-cog"></i>Setting</a>
           </li>
           <li>
-              <i class="fa fa-moon">
-                  <button type="button" class="btn btn-dark ml-3" onclick="enableDarkMode();">Dark mode</button>
-              </i>
+            <a href="#" onclick="enableDarkMode('true');"><i class="fa fa-moon"></i>Dark mode</a>
           </li>
         </ul>
       </aside>
@@ -93,19 +89,17 @@
         <div class="row">
           <div class="col-lg-12">
             <h2 class="content-title">The Intermediate Value Theorem Tutorial</h2>
-            <p>A tutorial about solving The Intermediate Value Theorem with Mr.Plott's method.</p>
+            <p>A tutorial about solving The Intermediate Value Theorem with the method that Mr.Plott showed in class.</p>
+            <p>The method is very simple, can take less than 1 minute to figure out.</p>
           </div>
-          <button type="button" class="btn btn-dark ml-3" onclick="startWriting();">Start learning!</button>
+          <button type="button" class="btn btn-dark ml-3" onclick="startWriting();">Click to see the method</button>
         </div>
-        <div id="calculator" style="width: 600px; height: 400px;"></div>
 
       </section>
 
     </div>
     <script>
-        
         function checkForMinimize(){
-            console.log(window.innerWidth);
             var width = window.innerWidth;
             if (width < 991){
                 var element = document.getElementById("wrapper");

@@ -2,26 +2,25 @@ var jsonMessages = [
     {
       "messages":{
         "tutorial":{
-            "1": "Welcome to the tutorial of the Intermediate Value Theorem\n",
-            "2": "An example is f(x)={TUTORIAL-EXAMPLE}\n",
-            "3": "The objective is to use the Intermediate Value Theorem\n",
-            "4": "to figure out whether there is a root in the interval ({VALUE-1}, {VALUE-2})\n",
-            "5": "And it is incredibly simple to figure out.\n",
-            "6": "\n",
-            "7": "First, you plug in the intervals into the equation!\n",
-            "8": "{SOLVED-EQUATION-VALUE-1}\n",
-            "9": "{SOLVED-EQUATION-VALUE-2}\n",
-            "10": "\n",
-            "11": "Second, check if the values go through 0\n",
-            "12": "If yes, then the Intermediate Value Theorem is correct.\n",
-            "13": "If not, then it's wrong.\n",
-            "14": "\n",
-            "15": "Finally, make a statement.\n\n",
-            "16": "In this case, the statement would be...\n",
-            "17": "\"{EQUATION-STATEMENT}\"\n\n",
-            "18": "The other statement is\n",
-            "19": "\"{OPPOSITE-EQUATION-STATEMENT}\"\n\n",
-            "20": "And that's all!"
+            "1": "Welcome to the tutorial of the Intermediate Value Theorem.\n",
+            "2": "An example is f(x)={TUTORIAL-EXAMPLE}.\n",
+            "3": "The objective is to use the Intermediate Value Theorem.\n",
+            "4": "to figure out whether there is a root in the interval ({VALUE-1}, {VALUE-2}).\n",
+            "5": "\n",
+            "6": "First, you plug in the intervals into the equation.\n",
+            "7": "{SOLVED-EQUATION-VALUE-1}\n",
+            "8": "{SOLVED-EQUATION-VALUE-2}\n",
+            "9": "\n",
+            "10": "Second, check if the values go through 0.\n",
+            "11": "If yes, then the Intermediate Value Theorem is correct and it can go through 0.\n",
+            "12": "If not, then it cannot be determined whether it goes through 0 or not.\n",
+            "13": "\n",
+            "14": "Finally, make a statement.\n\n",
+            "15": "In this case, the statement would be...\n",
+            "16": "\"{EQUATION-STATEMENT}\"\n\n",
+            "17": "The other statement is\n",
+            "18": "\"{OPPOSITE-EQUATION-STATEMENT}\"\n\n",
+            "19": "And that's all!"
         }
       }
     }

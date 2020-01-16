@@ -11,3 +11,12 @@ function setupEquation(variable, valueInput){
   return result.replaceAll(variable, valueInput).toString();
 }
 
+/*
+function setupNegativeNumbers(variable){
+  var re = /^-\d+$/gm;
+  var str = variable;
+  var subst = '$1() ';
+  var result = str.replace(re, subst);
+  return result;
+}
+*/

@@ -8,7 +8,7 @@ function startWriting(){
     for (var i = 1; i < Object.keys(jsonMessages[0].messages.tutorial).length + 1; i++){
         var message = replaceTutorialExample(jsonMessages[0].messages.tutorial[i], mathProblem);
         var voiceMessage = replaceTextToSpeechExample(jsonMessages[0].messages.tutorial[i], mathProblem);
-//        var voice = texttospeech(voiceMessage);
+        texttospeech(voiceMessage);
         typewriter.typeString(message).start();
     }
 }
@@ -33,8 +33,7 @@ function checkInteger(int1, int2, string){
 }
 
 function texttospeech(string){
-	var voice = responsiveVoice.speak(string, "US English Male", {rate: 1.1});
-    return voice;
+	responsiveVoice.speak(string, "US English Male", {rate: 1.1});
 }
 
 String.prototype.replaceAll = function (stringToFind, stringToReplace) {
