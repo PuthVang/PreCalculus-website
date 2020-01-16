@@ -33,7 +33,13 @@ function checkInteger(int1, int2, string){
 }
 
 function texttospeech(string){
-	responsiveVoice.speak(string, "US English Male", {rate: 1.1});
+  var voice = window.speechSynthesis;
+  var englishVoice = window.speechSynthesis.getVoices()[0];
+  var words = new SpeechSynthesisUtterance();
+  words.rate = 1;
+  words.pitch = 1;
+  words.text = string;
+  voice.speak(words);
 }
 
 String.prototype.replaceAll = function (stringToFind, stringToReplace) {
