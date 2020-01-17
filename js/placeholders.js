@@ -6,18 +6,15 @@ function replacedSolvedEquations(string){
 }
 
 function replaceDigits(string){
-    if (getCookieValue("iA") == null){
-        setCookieValue("iA", getRandomInteger());
-    }
-    if (getCookieValue("iB") == null){
+    setCookieValue("iA", (getRandomInteger() - 1));
+    setCookieValue("iB", getRandomInteger());
+    while (getCookieValue("iB") >= getCookieValue("iA")){
         setCookieValue("iB", getRandomInteger());
     }
     valueA = getCookieValue("iA");
     valueB = getCookieValue("iB");
-    value1 = checkInteger(valueA, valueB, "lowest");
-    value2 = checkInteger(valueA, valueB, "highest");
-    string = string.replace("{VALUE-1}", value1);
-    string = string.replace("{VALUE-2}", value2);
+    string = string.replace("{VALUE-1}", valueA);
+    string = string.replace("{VALUE-2}", valueB);
     return string;
 }
 
@@ -47,21 +44,3 @@ function replaceTutorialExample(string, mathProblem){
     return string;
 }
 
-function replaceTextToSpeechExample(string, mathProblem){
-    if (string.includes("{VALUE-1}") || string.includes("{VALUE-2}")){
-        string = replaceDigits(string);
-    }
-    string = string.replaceAll("\n", "");
-    string = string.replaceAll("{TUTORIAL-EXAMPLE}", mathProblem);
-    string = string.replaceAll("*(", " ");
-    string = string.replaceAll("(", " ");
-    string = string.replaceAll(")", " ");
-    string = string.replaceAll("+-", " negative ");
-    string = string.replaceAll("+", " plus ");
-    string = string.replaceAll("-", " minus ");
-    string = string.replaceAll("*", " times ");
-    string = string.replaceAll("/", " divided by ");
-    string = string.replaceAll("x^2", " ex squared");
-    string = string.replaceAll("x^3", " ex cubed");
-    return string;
-}

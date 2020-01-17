@@ -2,15 +2,14 @@ function startWriting(){
     var app = document.getElementById("content-wrapper");
     var typewriter = new Typewriter(app, {
         loop: false,
-        delay: 56
+        delay: 69
     });
     var mathProblem = getRandomMathProblem();
     for (var i = 1; i < Object.keys(jsonMessages[0].messages.tutorial).length + 1; i++){
         var message = replaceTutorialExample(jsonMessages[0].messages.tutorial[i], mathProblem);
-        var voiceMessage = replaceTextToSpeechExample(jsonMessages[0].messages.tutorial[i], mathProblem);
-        texttospeech(voiceMessage);
         typewriter.typeString(message).start();
     }
+    typewriter.stop();
 }
 
 function checkInteger(int1, int2, string){
@@ -30,16 +29,6 @@ function checkInteger(int1, int2, string){
       return int2;
     }
   }
-}
-
-function texttospeech(string){
-  var voice = window.speechSynthesis;
-  var englishVoice = window.speechSynthesis.getVoices()[0];
-  var words = new SpeechSynthesisUtterance();
-  words.rate = 1;
-  words.pitch = 1;
-  words.text = string;
-  voice.speak(words);
 }
 
 String.prototype.replaceAll = function (stringToFind, stringToReplace) {

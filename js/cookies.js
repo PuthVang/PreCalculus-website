@@ -1,15 +1,3 @@
-function setDefaultCookies(){
-	setCookieValue("correctValuas", "ahuethaetthioeahohohiehthitpttipt")
-	setCookieValue("correctValuaaes", "10")
-	setCookieValue("correctValuaaaes", "10")
-	setCookieValue("correctValuaaaas", "10")
-	setCookieValue("correctValuaaaaaes", "10")
-	setCookieValue("correctValuaaaaaaes", "10")
-	setCookieValue("correctValuaaaaaaes", "25")
-	console.log(getCookieValue("correctValuas"))
-	console.log(getCookieValue("aaaaa"))
-}
-
 function setCookieValue(cookieID, cookieValue){
 	var cookie = document.cookie;
 	if (!(cookie.includes(cookieID))){
@@ -56,6 +44,21 @@ function getCookieValue(cookieID){
     }
     return null;
 
+}
+
+function deleteCookie(cookieID) {
+	var cookies = document.cookie.split(";");
+    for (s of cookies){
+		var cookieSplit = s.split(" ");
+        console.log("AAAAAAAB " + s)
+		for (s of cookieSplit){
+			var sSplit = s.split("=");
+			if (sSplit[0] == cookieID){
+                document.cookie = sSplit[0] + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            }
+		}
+    }
+    console.log(document.cookie)
 }
 
 function deleteAllCookies() {
