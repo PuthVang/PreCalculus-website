@@ -1,0 +1,30 @@
+var practiceMessages = [
+    {
+        "practice":{
+            "1": "Here's your equation: {CURRENT-EQUATION}\n",
+            "2": "Here's your intervals: ({INTERVAL-1}, {INTERVAL-2})\n",
+            "3": "Use the Intermediate Value Theorem to figure out whether there is a root in the intervals right above this message.\n",
+            "4": "Input in the values for the interval.\n",
+            "5": "<input type='text' id='practiceIntervalValueOne' placeholder='Interval One Value'>\n",
+            "6": "<input type='text' id='practiceIntervalValueTwo' placeholder='Interval Two Value'>\n",
+            "7": "<input type='text' id='practiceStatementValue' placeholder='Statement'>\n",
+            "8": "<button type='button' id='submitAnswer' class='btn btn-dark ml-3' onclick='submitPracticeAnswers();'>Submit your answers</button>"
+        },
+        "correct":{
+            "1": "Looks like you are correct with it all.",
+            "2": "Well done!"
+        }
+    }
+]
+
+var practiceProblems = [
+    {
+        "practice":{
+          "1": "12*(x^3) - 32*(x^2) + 3*(x) + 5",
+          "2": "(x^3) - 5*(x^2) + 3*(x) + 6",
+          "3": "(x^3) - 4*(x^2) + 2*(x) + 4",
+          "4": "(x^5) - 7*(x^3) + 5(x) - 8"
+        }
+    }
+]
+

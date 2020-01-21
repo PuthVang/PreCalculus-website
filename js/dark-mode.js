@@ -1,3 +1,5 @@
+// This is dark mode, slow and inefficient but it works.
+
 function enableDarkMode(changeTheme){
     var elementA = document.getElementsByTagName("a");
     var element = document.body;

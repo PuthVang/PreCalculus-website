@@ -1,0 +1,56 @@
+var tutorialMessages = [
+    {
+        "tutorial":{
+            "1": "Welcome to the tutorial of the Intermediate Value Theorem.\n",
+            "2": "The explanation is going to be quick and simple (2 to 3 steps), \n",
+            "3": "Because this method of the the Intermediate Value Theorem is simple.\n",
+            "4": "Here's a random example and the objective of the Intermediate Value Theorem.\n",
+            "5": "\n",
+            "6": "f(x)={CURRENT-EQUATION}.\n",
+            "7": "Use the Intermediate Value Theorem to figure out whether there is a root in the intervals ({INTERVAL-1}, {INTERVAL-2}).\n",
+            "8": "\n",
+            "9": "<button type='button' class='btn btn-dark ml-3' onclick='startStepOne();'>Go to step one</button>",
+            "10": "<button type='button' class='btn btn-dark ml-3' onclick='startTutorial();'>Restart the process</button>"
+        },
+        "step1":{
+            "1": "Let's get started!\n",
+            "2": "(This first step is optional if you already have the values of the intervals)\n",
+            "3": "<b>Step 1) You plug in the intervals into the equation.</b>\n",
+            "4": "\n",
+            "5": "{SOLVED-EQUATION-INTERVAL-1}\n",
+            "6": "{SOLVED-EQUATION-INTERVAL-2}\n",
+            "7": "\n",
+            "8": "<button type='button' class='btn btn-dark ml-3' onclick='startStepTwo();'>Go to step two</button>",
+            "9": "<button type='button' class='btn btn-dark ml-3' onclick='startTutorial();'>Restart the process</button>"
+        },
+        "step2":{
+            "1": "<b>Step 2) Check if a 0 can exist between those two intervals.</b>\n",
+            "2": "\n",
+            "3": "If yes, then the Intermediate Value Theorem is correct and a zero exist between the intervals.\n",
+            "4": "If not, then the Intermediate Value Theorem cannot determine whether a zero exist between the intervals.\n",
+            "5": "\n",
+            "6": "<button type='button' class='btn btn-dark ml-3' onclick='startStepThree();'>Go to step three</button>",
+            "7": "<button type='button' class='btn btn-dark ml-3' onclick='startTutorial();'>Restart the process</button>"
+        },
+        "step3":{
+            "1": "<b>Step 3) Make a statement based on Step 2.</b>\n",
+            "2": "\n",
+            "3": "In this case, the correct statement for this would be...\n",
+            "4": "\"{EQUATION-STATEMENT}\"\n",
+            "5": "\n",
+            "6": "The other (correct but) wrong statement (in this case) is\n",
+            "7": "\"{OPPOSITE-EQUATION-STATEMENT}\"\n",
+            "8": "\n",
+            "9": "And that's all!\n",
+            "10": "<button type='button' class='btn btn-dark ml-3' onclick='startTutorial();'>Restart the process</button>"
+        }
+    }
+]
+
+var tutorialExamples = [
+    {
+        "tutorial":{
+            "1": "12*(x^3) - 32*(x^2) + 3*(x) + 5"
+        }
+    }
+]

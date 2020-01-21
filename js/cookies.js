@@ -1,3 +1,7 @@
+// Cookies!
+
+// This one set the values of an ID
+
 function setCookieValue(cookieID, cookieValue){
 	var cookie = document.cookie;
 	if (!(cookie.includes(cookieID))){
@@ -27,6 +31,8 @@ function setCookieValue(cookieID, cookieValue){
 	}
 }
 
+// This one gets the value of a cookie ID
+
 function getCookieValue(cookieID){
 	var cookie = document.cookie;
 	if (cookie.includes(cookieID)){
@@ -46,11 +52,12 @@ function getCookieValue(cookieID){
 
 }
 
+// This one delete things
+
 function deleteCookie(cookieID) {
 	var cookies = document.cookie.split(";");
     for (s of cookies){
 		var cookieSplit = s.split(" ");
-        console.log("AAAAAAAB " + s)
 		for (s of cookieSplit){
 			var sSplit = s.split("=");
 			if (sSplit[0] == cookieID){
@@ -58,8 +65,10 @@ function deleteCookie(cookieID) {
             }
 		}
     }
-    console.log(document.cookie)
 }
+
+// This one delete every single thing
+// Source: https://stackoverflow.com/a/179514
 
 function deleteAllCookies() {
     var cookies = document.cookie.split(";");

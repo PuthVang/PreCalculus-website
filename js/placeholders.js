@@ -1,46 +1,73 @@
+// The placeholder for the solved equation, i.e. f(x)=5(3^2)*2(3)
 
-function replacedSolvedEquations(string){
-  string = string.replace("{SOLVED-EQUATION-VALUE-1}", getCurrentEquation().replaceAll("x", getCookieValue("iA")) + "=" + eval(setupEquation("x", getCookieValue("iA"))));
-  string = string.replace("{SOLVED-EQUATION-VALUE-2}", getCurrentEquation().replaceAll("x", getCookieValue("iB")) + "=" + eval(setupEquation("x", getCookieValue("iB"))));
+function replacedSolvedEquations(string, equationCookieValue, variableValue, intervalOneValue, intervalTwoValue){
+  string = string.replace(/{SOLVED-EQUATION-INTERVAL-1}/g, equationCookieValue.replaceAll(variableValue, intervalOneValue) + "=" + eval(setupEquation(equationCookieValue, variableValue, intervalOneValue)));
+  string = string.replace(/{SOLVED-EQUATION-INTERVAL-2}/g, equationCookieValue.replaceAll(variableValue, intervalOneValue) + "=" + eval(setupEquation(equationCookieValue, variableValue, intervalTwoValue)));
   return string;
 }
 
-function replaceDigits(string){
-    setCookieValue("iA", (getRandomInteger() - 1));
-    setCookieValue("iB", getRandomInteger());
-    while (getCookieValue("iB") >= getCookieValue("iA")){
-        setCookieValue("iB", getRandomInteger());
+
+// Random integer between -5 and 5.
+
+function getRandomInteger(){
+    var min=-5;
+    var max=5;
+    var random = Math.floor(Math.random() * (+max - +min)) + +min;
+    return random;
+}
+
+// Replaces the current interval digits to new ones.
+
+function replaceDigits(string, replaceValues, intervalOneName, intervalTwoName){
+    if (replaceValues){
+        var lowest = getRandomInteger();
+        var highest = getRandomInteger();
+        for (var i = 1; i < 10; i++){
+            if (lowest == highest){
+                lowest = getRandomInteger();        
+            }
+        }
+        setCookieValue(intervalOneName, checkInteger(highest, lowest, "lowest"));
+        setCookieValue(intervalTwoName, checkInteger(highest, lowest, "highest"));
     }
-    valueA = getCookieValue("iA");
-    valueB = getCookieValue("iB");
-    string = string.replace("{VALUE-1}", valueA);
-    string = string.replace("{VALUE-2}", valueB);
+    valueA = getCookieValue(intervalOneName);
+    valueB = getCookieValue(intervalTwoName);
+    string = string.replace(/{INTERVAL-1}/g, valueA);
+    string = string.replace(/{INTERVAL-2}/g, valueB);
     return string;
 }
 
-function replaceTutorialExample(string, mathProblem){
-    if (string.includes("{VALUE-1}") || string.includes("{VALUE-2}")){
-        string = replaceDigits(string);
+// Replaces the things listed below with their stuff using regex and values.
+// i.e.
+// {INTERVAL-1} = the first invertal of (x, xx).
+// In this case, it's x.
+// {INTERVAL-2} = the second invertal of (x, xx)
+// In this case, it's xx.
+// and many more placeholders
+
+function replaceEquationPlaceholders(string, equationCookieValue, variableValue, intervalOneName, intervalTwoName){
+    if (string.includes("{INTERVAL-1}") || string.includes("{INTERVAL-2}")){
+        string = replaceDigits(string, true, intervalOneName, intervalTwoName);
     }
+    var intervalOneValue = getCookieValue(intervalOneName);
+    var intervalTwoValue = getCookieValue(intervalTwoName);
     if (string.includes("{ANSWER-1}")){
-      string = string.replaceAll("{ANSWER-1}", eval(setupEquation("x", getCookieValue("iA"))))
+        string = string.replace(/{ANSWER-1}/g, eval(setupEquation(equationCookieValue, variableValue, intervalOneValue)))
     }
     if (string.includes("{ANSWER-2}")){
-      string = string.replaceAll("{ANSWER-2}", eval(setupEquation("x", getCookieValue("iB"))))
+        string = string.replace(/{ANSWER-2}/g, eval(setupEquation(equationCookieValue, variableValue, intervalTwoValue)))
     }
-    if (string.includes("{SOLVED-EQUATION-VALUE-1}") || string.includes("{SOLVED-EQUATION-VALUE-2}")){
-      string = replacedSolvedEquations(string);
+    if (string.includes("{SOLVED-EQUATION-INTERVAL-1}") || string.includes("{SOLVED-EQUATION-INTERVAL-2}")){
+        string = replacedSolvedEquations(string, equationCookieValue, variableValue, intervalOneValue, intervalTwoValue);
     }
     if (string.includes("{EQUATION-STATEMENT}")){
-      string = string.replace("{EQUATION-STATEMENT}", getStatement());
+        string = string.replace(/{EQUATION-STATEMENT}/g, getStatement(equationCookieValue, variableValue, intervalOneValue, intervalTwoValue));
     }
     if (string.includes("{OPPOSITE-EQUATION-STATEMENT}")){
-      string = string.replace("{OPPOSITE-EQUATION-STATEMENT}", getOppositeStatement());
+        string = string.replace(/{OPPOSITE-EQUATION-STATEMENT}/g, getOppositeStatement(equationCookieValue, variableValue, intervalOneValue, intervalTwoValue));
     }
-    string = string.replaceAll("{TUTORIAL-EXAMPLE}", mathProblem);
-    string = string.replaceAll("\n", "<br>");
-    string = string.replaceAll("+-", "-");
-    string = string.replaceAll("*(", "(");
+    string = string.replace(/{CURRENT-EQUATION}/g, equationCookieValue);
+    string = string.replace(/(?:\r\n|\r|\n)/g, "<br>");
+    string = string.replace(/\*\(/g, "(");
     return string;
 }
-

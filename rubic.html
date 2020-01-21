@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!--
-Typewriter effect - https://github.com/tameemsafi/typewriterjs
-Layout template - https://codepen.io/klocek/pen/pdYgmx
-Deleting all cookies - https://stackoverflow.com/a/179514
-Bootstrap - https://maxcdn.bootstrapcdn.com/
--->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,32 +15,18 @@ Bootstrap - https://maxcdn.bootstrapcdn.com/
     <!-- Global JS -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/levenshtein/1.0.5/levenshtein.js"></script>
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/dark-mode.css">
     <link rel="stylesheet" href="css/typing.css">
-
-    <!-- Custom JS -->
-    <script type="text/javascript" src="js/cookies.js"></script>
-    <script type="text/javascript" src="js/dark-mode.js"></script>
-    <script type="text/javascript" src="js/math.js"></script>
-    <script type="text/javascript" src="js/mathCookies.js"></script>
-    <script type="text/javascript" src="js/placeholders.js"></script>
-    <script type="text/javascript" src="js/screen-size.js"></script>
-    <script type="text/javascript" src="js/sidebar.js"></script>
-    <script type="text/javascript" src="js/statement.js"></script>
-    <script type="text/javascript" src="js/tutorial.js"></script>
-    <script type="text/javascript" src="js/typing.js"></script>
-    <script type="text/javascript" src="js/utilities.js"></script>
     
     <!-- Custom json files -->
-    <script type="text/javascript" src="json/tutorial.json"></script>
+    <script type="text/javascript" src="messages/tutorial.json"></script>
 
 </head>
 
-<body onload="enableDarkMode('false')">
+<body>
     <div id="wrapper">
       <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
@@ -56,11 +36,11 @@ Bootstrap - https://maxcdn.bootstrapcdn.com/
           <li>
             <a href="index.html"><i class="fa fa-home"></i>Home</a>
           </li>
-          <li class="active">
+          <li>
             <a href="#"><i class="fa fa-hands-helping"></i>Tutorial</a>
           </li>
-          <li>
-            <a href="practice.html"><i class="fa fa-book-open"></i>Practice</a>
+          <li class="active">
+            <a href="#"><i class="fa fa-book-open"></i>Practice</a>
           </li>
           <li>
             <a href="#"><i class="fa fa-gamepad"></i>Game</a>
@@ -80,11 +60,11 @@ Bootstrap - https://maxcdn.bootstrapcdn.com/
         </ul>
       </aside>
 
-      <div id="navbar-wrapper">
-        <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <div class="navbar-header" onclick='toggleSidebar();'>
-              <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
+      <div id="navbar-wrapper bg-dark">
+        <nav class="navbar navbar-inverse bg-dark">
+          <div class="container-fluid bg-dark">
+            <div class="navbar-header bg-dark" onclick='toggleSidebar();'>
+              <a href="#" class="navbar-brand bg-dark" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
             </div>
           </div>
         </nav>
@@ -93,11 +73,19 @@ Bootstrap - https://maxcdn.bootstrapcdn.com/
       <section id="content-wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h2 class="content-title">The Intermediate Value Theorem Tutorial</h2>
-            <p>A tutorial about solving The Intermediate Value Theorem with the method that Mr.Plott showed in class.</p>
-            <p>The method is very simple, can take less than 1 minute to figure out.</p>
-            <button type="button" class="btn btn-dark ml-3" onclick="startTutorial();">Click to see the method or restart the process</button>
-            <p></p>
+<!--            <h2 class="content-title">The Intermediate Value Theorem Practice</h2> -->
+            <p>Subject: Pre-Cal P.6</p>
+            <p>Topic: The Intermediate Value Theorem</p>
+            <p>Title of Lesson: The Intermediate Value Theorem</p>
+            <p>Lesson Objective: We want our audience to learn how to determine whether the line crosses  the x-axis or not.</p>
+            <p>Preresquisite Skills: How to find the Y value by inserting in the X.</p>
+            <p><br></p>
+            <p>Instructions:</p>
+            <p>"I do.": 1 example<br>12x^3 - 32x^2 + 3x + 5</p>
+            <p>"We do": 3 problems<br>x^3 - 5x^2 + 3x + 6<br>x^3 - 4x^2 + 2x + 1<br>x^5 - 7x^3 + 5x - 1</p>
+            <p><br>Recap: This acitvity has shown you how to use the Intermediate Value Theorem to check if there is a possible solution between the points</p>
+            <p>Technology: Computer Program or Electronic, requires internet access.</p>
+            <p>References: Typewriter effect, Website Layout template, Deleting all cookies snippet, Bootstrap, clipboard copy snippet, Regex stuff, and many more.</p>
           </div>
         </div>
       </section>

@@ -1,43 +1,51 @@
-function startWriting(){
-    var app = document.getElementById("content-wrapper");
-    var typewriter = new Typewriter(app, {
-        loop: false,
-        delay: 69
-    });
-    var mathProblem = getRandomMathProblem();
-    for (var i = 1; i < Object.keys(jsonMessages[0].messages.tutorial).length + 1; i++){
-        var message = replaceTutorialExample(jsonMessages[0].messages.tutorial[i], mathProblem);
-        typewriter.typeString(message).start();
+// Starts the tutorial by placing down text from json/tutorial.js
+
+function startTutorial(){
+    var app = document.getElementsByTagName("p")[2];
+    app.innerHTML = "";
+    setCookieValue(getTutorialVariableName(), "x");
+    var mathProblem = getRandomMathProblem(getTutorialJSONExamples(), getTutorialEquationCookieName());
+    for (var i = 1; i < Object.keys(tutorialMessages[0].tutorial).length + 1; i++){
+        var message = replaceEquationPlaceholders(tutorialMessages[0].tutorial[i], getTutorialEquationCookieValue(), getTutorialVariableValue(), getTutorialIntervalOneName(), getTutorialIntervalTwoName());
+        app.innerHTML += message;
     }
-    typewriter.stop();
 }
 
-function checkInteger(int1, int2, string){
-  if (string == "highest"){
-    if (int1 > int2){
-      return int1;
+// Starts Step One with JSON messages
+
+function startStepOne(){
+    var app = document.getElementsByTagName("p")[2];
+    var inner = app.innerHTML.split("<br>");
+    app.innerHTML = deleteButtons(inner);
+    setCookieValue(getTutorialVariableName(), "x");
+    for (var i = 1; i < Object.keys(tutorialMessages[0].step1).length + 1; i++){
+        var message = replaceEquationPlaceholders(tutorialMessages[0].step1[i], getTutorialEquationCookieValue(), getTutorialVariableValue(), getTutorialIntervalOneName(), getTutorialIntervalTwoName());
+        app.innerHTML += message;
     }
-    else{
-      return int2;
-    }
-  }
-  if (string == "lowest"){
-    if (int1 < int2){
-      return int1;
-    }
-    else{
-      return int2;
-    }
-  }
 }
 
-String.prototype.replaceAll = function (stringToFind, stringToReplace) {
-    if (stringToFind === stringToReplace) return this;
-    var temp = this;
-    var index = temp.indexOf(stringToFind);
-    while (index != -1) {
-        temp = temp.replace(stringToFind, stringToReplace);
-        index = temp.indexOf(stringToFind);
+// Starts Step Two with JSON messages
+
+function startStepTwo(){
+    var app = document.getElementsByTagName("p")[2];
+    var inner = app.innerHTML.split("<br>");
+    app.innerHTML = deleteButtons(inner);
+    setCookieValue(getTutorialVariableName(), "x");
+    for (var i = 1; i < Object.keys(tutorialMessages[0].step2).length + 1; i++){
+        var message = replaceEquationPlaceholders(tutorialMessages[0].step2[i], getTutorialEquationCookieValue(), getTutorialVariableValue(), getTutorialIntervalOneName(), getTutorialIntervalTwoName());
+        app.innerHTML += message;
     }
-    return temp;
-};
+}
+
+// Starts Step Three with JSON messages
+
+function startStepThree(){
+    var app = document.getElementsByTagName("p")[2];
+    var inner = app.innerHTML.split("<br>");
+    app.innerHTML = deleteButtons(inner);
+    setCookieValue(getTutorialVariableName(), "x");
+    for (var i = 1; i < Object.keys(tutorialMessages[0].step3).length + 1; i++){
+        var message = replaceEquationPlaceholders(tutorialMessages[0].step3[i], getTutorialEquationCookieValue(), getTutorialVariableValue(), getTutorialIntervalOneName(), getTutorialIntervalTwoName());
+        app.innerHTML += message;
+    }
+}

@@ -27,6 +27,7 @@ Bootstrap - https://maxcdn.bootstrapcdn.com/
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/dark-mode.css">
     <link rel="stylesheet" href="css/typing.css">
+    <link rel="stylesheet" href="css/inputs.css">
 
     <!-- Custom JS -->
     <script type="text/javascript" src="js/cookies.js"></script>
@@ -34,15 +35,14 @@ Bootstrap - https://maxcdn.bootstrapcdn.com/
     <script type="text/javascript" src="js/math.js"></script>
     <script type="text/javascript" src="js/mathCookies.js"></script>
     <script type="text/javascript" src="js/placeholders.js"></script>
+    <script type="text/javascript" src="js/practice.js"></script>
     <script type="text/javascript" src="js/screen-size.js"></script>
     <script type="text/javascript" src="js/sidebar.js"></script>
     <script type="text/javascript" src="js/statement.js"></script>
-    <script type="text/javascript" src="js/tutorial.js"></script>
-    <script type="text/javascript" src="js/typing.js"></script>
     <script type="text/javascript" src="js/utilities.js"></script>
-    
+
     <!-- Custom json files -->
-    <script type="text/javascript" src="json/tutorial.json"></script>
+    <script type="text/javascript" src="json/practice.json"></script>
 
 </head>
 
@@ -56,11 +56,11 @@ Bootstrap - https://maxcdn.bootstrapcdn.com/
           <li>
             <a href="index.html"><i class="fa fa-home"></i>Home</a>
           </li>
-          <li class="active">
-            <a href="#"><i class="fa fa-hands-helping"></i>Tutorial</a>
-          </li>
           <li>
-            <a href="practice.html"><i class="fa fa-book-open"></i>Practice</a>
+            <a href="tutorial.html"><i class="fa fa-hands-helping"></i>Tutorial</a>
+          </li>
+          <li class="active">
+            <a href="#"><i class="fa fa-book-open"></i>Practice</a>
           </li>
           <li>
             <a href="#"><i class="fa fa-gamepad"></i>Game</a>
@@ -93,10 +93,9 @@ Bootstrap - https://maxcdn.bootstrapcdn.com/
       <section id="content-wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h2 class="content-title">The Intermediate Value Theorem Tutorial</h2>
-            <p>A tutorial about solving The Intermediate Value Theorem with the method that Mr.Plott showed in class.</p>
-            <p>The method is very simple, can take less than 1 minute to figure out.</p>
-            <button type="button" class="btn btn-dark ml-3" onclick="startTutorial();">Click to see the method or restart the process</button>
+            <h2 class="content-title">The Intermediate Value Theorem Practice</h2>
+            <p>A practice mode of the Intermediate Value Theorem</p>
+            <button type="button" id="start-button" class="btn btn-dark ml-3" onclick="startPracticing();">Click to start!</button>
             <p></p>
           </div>
         </div>
