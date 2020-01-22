@@ -81,3 +81,23 @@ function getPracticeJSONMessages(){
 function getPracticeJSONProblems(){
     return practiceProblems[0].practice;
 }
+
+function getPracticeJSONCorrect(){
+    return practiceMessages[0].correct;
+}
+
+function getPracticeJSONIncorrect(){
+    return practiceMessages[0].incorrect;
+}
+
+function getPracticeJSONCorrect(){
+    return practiceMessages[0].correct;
+}
+
+function getPracticeJSONShowAnswer(){
+    return practiceMessages[0].showAnswer;
+}
+
+function getPracticeJSONCheckAnswer(){
+    return practiceMessages[0].checkAnswer;
+}

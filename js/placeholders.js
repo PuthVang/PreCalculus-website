@@ -71,3 +71,30 @@ function replaceEquationPlaceholders(string, equationCookieValue, variableValue,
     string = string.replace(/\*\(/g, "(");
     return string;
 }
+
+function replaceEquationPlaceholdersWithoutResettingTheIntervals(string, equationCookieValue, variableValue, intervalOneName, intervalTwoName){
+    if (string.includes("{INTERVAL-1}") || string.includes("{INTERVAL-2}")){
+        string = replaceDigits(string, false, intervalOneName, intervalTwoName);
+    }
+    var intervalOneValue = getCookieValue(intervalOneName);
+    var intervalTwoValue = getCookieValue(intervalTwoName);
+    if (string.includes("{ANSWER-1}")){
+        string = string.replace(/{ANSWER-1}/g, eval(setupEquation(equationCookieValue, variableValue, intervalOneValue)))
+    }
+    if (string.includes("{ANSWER-2}")){
+        string = string.replace(/{ANSWER-2}/g, eval(setupEquation(equationCookieValue, variableValue, intervalTwoValue)))
+    }
+    if (string.includes("{SOLVED-EQUATION-INTERVAL-1}") || string.includes("{SOLVED-EQUATION-INTERVAL-2}")){
+        string = replacedSolvedEquations(string, equationCookieValue, variableValue, intervalOneValue, intervalTwoValue);
+    }
+    if (string.includes("{EQUATION-STATEMENT}")){
+        string = string.replace(/{EQUATION-STATEMENT}/g, getStatement(equationCookieValue, variableValue, intervalOneValue, intervalTwoValue));
+    }
+    if (string.includes("{OPPOSITE-EQUATION-STATEMENT}")){
+        string = string.replace(/{OPPOSITE-EQUATION-STATEMENT}/g, getOppositeStatement(equationCookieValue, variableValue, intervalOneValue, intervalTwoValue));
+    }
+    string = string.replace(/{CURRENT-EQUATION}/g, equationCookieValue);
+    string = string.replace(/(?:\r\n|\r|\n)/g, "<br>");
+    string = string.replace(/\*\(/g, "(");
+    return string;
+}

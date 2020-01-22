@@ -10,9 +10,23 @@ var practiceMessages = [
             "7": "<input type='text' id='practiceStatementValue' placeholder='Statement'>\n",
             "8": "<button type='button' id='submitAnswer' class='btn btn-dark ml-3' onclick='submitPracticeAnswers();'>Submit your answers</button>"
         },
+        "incorrect":{
+            "1": "\nSeems like... you're incorrect at... {INCORRECT}\n",
+            "2": "<button type='button' id='showAnswers' class='btn btn-dark ml-3' onclick='showAnswers();'>See the answers?</button>\n",
+        },
         "correct":{
-            "1": "Looks like you are correct with it all.",
-            "2": "Well done!"
+            "1": "Looks like you are correct with it all.\n",
+            "2": "Well done!\n",
+            "3": "<button type='button' id='showAnswers' class='btn btn-dark ml-3' onclick='showAnswers();'>See the answers?</button>\n",
+        },
+        "showAnswer":{
+          "1": "The correct values for the intervals ({INTERVAL-1}, {INTERVAL-2}) are ({ANSWER-1}, {ANSWER-2})!\n",
+          "2": "The correct statement for the intervals is {EQUATION-STATEMENT}\n",
+          "3": "<button type='button' id='checkAnswers' class='btn btn-dark ml-3' onclick='checkAnswers();'>Check the answers?</button>\n"
+        },
+        "checkAnswer":{
+          "1": "<div id='calculator' style='width: 900px; height: 600px;'></div>\n",
+          "2": "<button type='button' id='start-button' class='btn btn-dark ml-3' onclick='startPracticing();'>Practice again?</button>"
         }
     }
 ]
