@@ -1,8 +1,19 @@
 # PreCalculus-website
 A website for my PreCalculus mid-term finals!<br>
-Website link: https://puthvang.github.io/PreCalculus-website/<br>
-Redirection link #1: http://the-intermediate-value-theorem.tk/<br>
-Redirection link #2: http://intermediate-value-theorem.tk/<br>
+Github redirect link(s):<br>
+rebrand.ly/TIVT-Github<br>
+rebrand.ly/IVT-Github<br>
+
+Website link(s):<br>
+https://puthvang.github.io/PreCalculus-website/<br>
+
+Website redirect link(s):<br>
+http://the-intermediate-value-theorem.tk/<br>
+http://intermediate-value-theorem.tk/<br>
+rebrand.ly/IVT<br>
+rebrand.ly/TIVT<br>
+rebrand.ly/The-Intermediate-Value-Theorem<br>
+rebrand.ly/Intermediate-Value-Theorem<br>
 
 # Credits
 **Website theme**: Klocek (https://codepen.io/klocek/pen/pdYgmx)<br>
