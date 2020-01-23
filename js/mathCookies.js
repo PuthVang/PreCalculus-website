@@ -1,5 +1,9 @@
-// TUTORIAL STUFF
+// Cookies ID & Values for the modes
 
+//
+//
+//
+// Tutorial stuff
 function getTutorialEquationCookieName(){
     return "tEQ";
 }
@@ -40,8 +44,10 @@ function getTutorialJSONMessages(){
     return tutorialMessages[0].tutorial;
 }
 
-// PRACTICE STUFF
-
+//
+//
+//
+// Practice stuff
 function getPracticeEquationCookieName(){
     return "pEQ";
 }
