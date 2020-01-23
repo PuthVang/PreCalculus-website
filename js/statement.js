@@ -1,5 +1,6 @@
 // Gets the statement required, checks if they're lower and higher than 0.
 // Having 0 as a value will render it as invalid (because I'm not sure if it counts).
+
 function getStatement(mathEquation, variableName, intervalOne, intervalTwo){
   var value1 = eval(setupEquation(mathEquation, variableName, intervalOne));
   var value2 = eval(setupEquation(mathEquation, variableName, intervalTwo));
@@ -13,7 +14,8 @@ function getStatement(mathEquation, variableName, intervalOne, intervalTwo){
   }
 }
 
-// Gets the opposite statement of the correct statement.
+// Gets the opposite of the correct statement required.
+
 function getOppositeStatement(mathEquation, variableName, intervalOne, intervalTwo){
   var value = getStatement(mathEquation, variableName, intervalOne, intervalTwo);
   if (value == "A zero cannot be verified on the intervals with the Intermediate Value Theorem."){

@@ -11,7 +11,7 @@ var practiceMessages = [
             "8": "<button type='button' id='submitAnswer' class='btn btn-dark ml-3' onclick='submitPracticeAnswers();'>Submit your answers</button>"
         },
         "incorrect":{
-            "1": "\nSeems like... you're incorrect at...\n{INCORRECT}\n",
+            "1": "\nSeems like... you're incorrect at... {INCORRECT}\n",
             "2": "<button type='button' id='showAnswers' class='btn btn-dark ml-3' onclick='showAnswers();'>See the answers?</button>\n",
         },
         "correct":{
@@ -25,7 +25,7 @@ var practiceMessages = [
           "3": "<button type='button' id='checkAnswers' class='btn btn-dark ml-3' onclick='checkAnswers();'>Check the answers?</button>\n"
         },
         "checkAnswer":{
-          "1": "<div id='calculator' style='width: 729px; height: 486px;'></div>\n",
+          "1": "<div id='calculator' style='width: 900px; height: 600px;'></div>\n",
           "2": "<button type='button' id='start-button' class='btn btn-dark ml-3' onclick='startPracticing();'>Practice again?</button>"
         }
     }

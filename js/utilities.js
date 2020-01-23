@@ -1,5 +1,6 @@
 // A simple replaceAll function because JavaScript doesn't have one
 // Source: https://stackoverflow.com/a/16438422
+
 String.prototype.replaceAll = function (stringToFind, stringToReplace) {
     if (stringToFind === stringToReplace) return this;
     var temp = this;
@@ -12,6 +13,7 @@ String.prototype.replaceAll = function (stringToFind, stringToReplace) {
 };
 
 // Checks for the highest or lowest integer between the two integers
+
 function checkInteger(int1, int2, string){
   if (string == "highest"){
     if (int1 > int2){
@@ -32,6 +34,7 @@ function checkInteger(int1, int2, string){
 }
 
 // Remove buttons!
+
 function deleteButtons(inner){
     for (s of inner){
         if (s.includes("button")){

@@ -1,5 +1,6 @@
 # PreCalculus-website
 A website for my PreCalculus mid-term finals!
+<<<<<<< HEAD
 
 # Credits
 **Website theme**: Klocek (https://codepen.io/klocek/pen/pdYgmx)\
@@ -11,3 +12,5 @@ Basic **exponent** replacer (x^2 -> Math.pow(x, 2)):  Ahosan Karim Asik  (https:
 Basic **input boxes**: zFunx (https://codepen.io/zFunx/pen/XRyqvx)\
 **Removing and adding classes to elements**: ??? (https://codepen.io/anon/pen/GdaoXQ)\
 **12x^3 - 32x^2 + 3x + 5**: Mr.Plotts (Intermediate Value Theorem assignment)\
+=======
+>>>>>>> parent of eb11263... v1.0.5

@@ -1,5 +1,5 @@
 // This is dark mode, slow and inefficient but it works.
-// Adding & removing classes source: https://codepen.io/anon/pen/GdaoXQ
+
 function enableDarkMode(changeTheme){
     var elementA = document.getElementsByTagName("a");
     var element = document.body;
