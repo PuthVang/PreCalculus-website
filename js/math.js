@@ -1,6 +1,5 @@
-
-// Sets up the equation by changing 5(x^2) to 5(Math.pow(x, 2)) so it can evaluate and give answers
-
+// Sets up the equation by changing 5(x^2) to 5(Math.pow(x, 2)) so JavaScript can evaluate it and give answers.
+// Source: https://stackoverflow.com/a/27074579
 function setupEquation(mathEquation, variableRegex, valueInput){
   var re = /(?![\+\-\*\/\(\)\^\s])([a-zA-Z0-9]+)\^([a-zA-Z0-9]+)/gm;
   var str = mathEquation;
@@ -10,7 +9,6 @@ function setupEquation(mathEquation, variableRegex, valueInput){
 }
 
 // Gets a random math problem based on their json location and node.
-
 function getRandomMathProblem(jsonArrayList, equationCookieName){
     var min=1;
     var max=Object.keys(jsonArrayList).length;
